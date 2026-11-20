@@ -1,0 +1,12 @@
+# Binarios e temporarios
+laboratorio
+laboratorio.exe
+teste_estruturas
+teste_estruturas.exe
+*.o
+*.obj
+*.out
+*.exe
+*.tmp
+.DS_Store
+.vscode/
