@@ -65,7 +65,7 @@ A implementacao inicial **dos quatro modulos, dos menus, da suite de testes e da
 - **Trechos afetados:** `testes/teste_estruturas.c`, `scripts/verificar.sh`, `testes/entrada_demo.txt`, `docs/evidencias/demo-terminal.txt` e `docs/evidencias/verificacao-terminal.txt`.
 - **Aproveitamento:** implementacao de testes e comandos proposta e executada pela IA. Nenhum resultado foi preenchido como hipotetico: os arquivos de evidencias foram gerados por execucoes reais.
 - **Verificacao:** cinco grupos de testes com `assert` passaram e compilacao com `-Werror` ocorreu sem avisos. Tambem foi verificado fluxo real do menu.
-- **Commit:** consultar o commit de finalizacao de testes e documentacao no `git log`.
+- **Commit:** `e46b44e` (testes e documentacao).
 
 ### IA-07 — Documentacao, comparacao e roteiro do video
 
@@ -74,7 +74,7 @@ A implementacao inicial **dos quatro modulos, dos menus, da suite de testes e da
 - **Trechos afetados:** `README.md`, `USO_IA.md`, `docs/testes.md`, `docs/comparacao.md`, `docs/roteiro_video.md`.
 - **Aproveitamento:** textos iniciais produzidos com IA. Os campos de autoria, RA e link de video devem ser completados pelo aluno e a explicacao deve ser revisada por ele.
 - **Verificacao:** conferencia de criterios das pp. 5–7 do enunciado, resultados tecnicos cotejados com a execucao. Antes de entregar, revisar toda a documentacao e os links.
-- **Commit:** consultar o commit final de documentacao no `git log`.
+- **Commit:** `e46b44e` (documentacao inicial).
 
 ## Como atualizar este documento durante a revisao
 
