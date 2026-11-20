@@ -1,3 +1,4 @@
+/* Integracao de menus e experimento com apoio de IA: ver IA-05 em USO_IA.md. */
 #include "arvore_binaria.h"
 #include "bst.h"
 #include "avl.h"

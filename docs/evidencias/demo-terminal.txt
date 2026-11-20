@@ -1,0 +1,264 @@
+=== LABORATORIO INTERATIVO DE ARVORES ===
+
+1 Arvore binaria | 2 BST | 3 AVL | 4 Max-heap | 5 Comparacao | 0 Sair
+Opcao: 
+--- ARVORE BINARIA ---
+1 Inserir | 2 Carregar exemplo | 3 Exibir | 4 Limpar | 0 Voltar
+Opcao: Exemplo carregado.
+
+--- ARVORE BINARIA ---
+1 Inserir | 2 Carregar exemplo | 3 Exibir | 4 Limpar | 0 Voltar
+Opcao: Raiz: 10
+No          Esquerdo    Direito
+10          30          5
+30          20          40
+20          NULL        NULL
+40          NULL        NULL
+5           NULL        15
+15          NULL        NULL
+Pre-ordem: 10, 30, 20, 40, 5, 15
+Em ordem:  20, 30, 40, 10, 5, 15
+Pos-ordem: 20, 40, 30, 15, 5, 10
+Nos: 6 | Folhas: 3 | Altura: 2
+
+--- ARVORE BINARIA ---
+1 Inserir | 2 Carregar exemplo | 3 Exibir | 4 Limpar | 0 Voltar
+Opcao: Nova chave: Chave do pai: Lado (E=esquerdo, D=direito): Rejeitada: posicao ocupada (subarvore preservada).
+
+--- ARVORE BINARIA ---
+1 Inserir | 2 Carregar exemplo | 3 Exibir | 4 Limpar | 0 Voltar
+Opcao: Raiz: 10
+No          Esquerdo    Direito
+10          30          5
+30          20          40
+20          NULL        NULL
+40          NULL        NULL
+5           NULL        15
+15          NULL        NULL
+Pre-ordem: 10, 30, 20, 40, 5, 15
+Em ordem:  20, 30, 40, 10, 5, 15
+Pos-ordem: 20, 40, 30, 15, 5, 10
+Nos: 6 | Folhas: 3 | Altura: 2
+
+--- ARVORE BINARIA ---
+1 Inserir | 2 Carregar exemplo | 3 Exibir | 4 Limpar | 0 Voltar
+Opcao: 
+1 Arvore binaria | 2 BST | 3 AVL | 4 Max-heap | 5 Comparacao | 0 Sair
+Opcao: 
+--- BST ---
+1 Inserir | 2 Buscar | 3 Remover | 4 Exibir | 5 Verificar | 6 Limpar | 0 Voltar
+Opcao: Nova chave: Insercao realizada.
+
+--- BST ---
+1 Inserir | 2 Buscar | 3 Remover | 4 Exibir | 5 Verificar | 6 Limpar | 0 Voltar
+Opcao: Nova chave: Insercao realizada.
+
+--- BST ---
+1 Inserir | 2 Buscar | 3 Remover | 4 Exibir | 5 Verificar | 6 Limpar | 0 Voltar
+Opcao: Nova chave: Insercao realizada.
+
+--- BST ---
+1 Inserir | 2 Buscar | 3 Remover | 4 Exibir | 5 Verificar | 6 Limpar | 0 Voltar
+Opcao: Nova chave: Insercao realizada.
+
+--- BST ---
+1 Inserir | 2 Buscar | 3 Remover | 4 Exibir | 5 Verificar | 6 Limpar | 0 Voltar
+Opcao: Nova chave: Insercao realizada.
+
+--- BST ---
+1 Inserir | 2 Buscar | 3 Remover | 4 Exibir | 5 Verificar | 6 Limpar | 0 Voltar
+Opcao: Nova chave: Insercao realizada.
+
+--- BST ---
+1 Inserir | 2 Buscar | 3 Remover | 4 Exibir | 5 Verificar | 6 Limpar | 0 Voltar
+Opcao: Nova chave: Insercao realizada.
+
+--- BST ---
+1 Inserir | 2 Buscar | 3 Remover | 4 Exibir | 5 Verificar | 6 Limpar | 0 Voltar
+Opcao: Raiz: 50
+No          Esquerdo    Direito
+50          30          70
+30          20          40
+20          NULL        NULL
+40          NULL        NULL
+70          60          80
+60          NULL        NULL
+80          NULL        NULL
+Pre-ordem: 50, 30, 20, 40, 70, 60, 80
+Em ordem:  20, 30, 40, 50, 60, 70, 80
+Pos-ordem: 20, 40, 30, 60, 80, 70, 50
+Nos: 7 | Altura: 2 | Propriedade BST: VALIDA
+
+--- BST ---
+1 Inserir | 2 Buscar | 3 Remover | 4 Exibir | 5 Verificar | 6 Limpar | 0 Voltar
+Opcao: Buscar chave: Encontrada. Nos visitados: 32767
+
+--- BST ---
+1 Inserir | 2 Buscar | 3 Remover | 4 Exibir | 5 Verificar | 6 Limpar | 0 Voltar
+Opcao: Buscar chave: Nao encontrada. Nos visitados: 3
+
+--- BST ---
+1 Inserir | 2 Buscar | 3 Remover | 4 Exibir | 5 Verificar | 6 Limpar | 0 Voltar
+Opcao: Remover chave: Removida (sucessor em ordem quando dois filhos).
+
+--- BST ---
+1 Inserir | 2 Buscar | 3 Remover | 4 Exibir | 5 Verificar | 6 Limpar | 0 Voltar
+Opcao: Remover chave: Removida (sucessor em ordem quando dois filhos).
+
+--- BST ---
+1 Inserir | 2 Buscar | 3 Remover | 4 Exibir | 5 Verificar | 6 Limpar | 0 Voltar
+Opcao: Remover chave: Removida (sucessor em ordem quando dois filhos).
+
+--- BST ---
+1 Inserir | 2 Buscar | 3 Remover | 4 Exibir | 5 Verificar | 6 Limpar | 0 Voltar
+Opcao: Raiz: 60
+No          Esquerdo    Direito
+60          40          70
+40          NULL        NULL
+70          NULL        80
+80          NULL        NULL
+Pre-ordem: 60, 40, 70, 80
+Em ordem:  40, 60, 70, 80
+Pos-ordem: 40, 80, 70, 60
+Nos: 4 | Altura: 2 | Propriedade BST: VALIDA
+
+--- BST ---
+1 Inserir | 2 Buscar | 3 Remover | 4 Exibir | 5 Verificar | 6 Limpar | 0 Voltar
+Opcao: 
+1 Arvore binaria | 2 BST | 3 AVL | 4 Max-heap | 5 Comparacao | 0 Sair
+Opcao: 
+--- AVL ---
+1 Inserir | 2 Buscar | 3 Exibir | 4 Verificar | 5 Limpar | 0 Voltar
+Opcao: Nova chave: Insercao realizada.
+Rotacoes: nenhuma nesta insercao.
+Validacao apos insercao: OK
+
+--- AVL ---
+1 Inserir | 2 Buscar | 3 Exibir | 4 Verificar | 5 Limpar | 0 Voltar
+Opcao: Nova chave: Insercao realizada.
+Rotacoes: nenhuma nesta insercao.
+Validacao apos insercao: OK
+
+--- AVL ---
+1 Inserir | 2 Buscar | 3 Exibir | 4 Verificar | 5 Limpar | 0 Voltar
+Opcao: Nova chave: Insercao realizada.
+Rotacao LR: esquerda no filho e direita no no (1 vez(es)).
+Validacao apos insercao: OK
+
+--- AVL ---
+1 Inserir | 2 Buscar | 3 Exibir | 4 Verificar | 5 Limpar | 0 Voltar
+Opcao: Raiz: 20
+No        Esquerdo  Direito   Altura  FB
+20        10        30        1       0
+10        NULL      NULL      0       0
+30        NULL      NULL      0       0
+Em ordem: 10, 20, 30
+Nos: 3 | Altura: 1 | BST + balanceamento + alturas: VALIDOS
+
+--- AVL ---
+1 Inserir | 2 Buscar | 3 Exibir | 4 Verificar | 5 Limpar | 0 Voltar
+Opcao: AVL limpa. Raiz = NULL.
+
+--- AVL ---
+1 Inserir | 2 Buscar | 3 Exibir | 4 Verificar | 5 Limpar | 0 Voltar
+Opcao: Nova chave: Insercao realizada.
+Rotacoes: nenhuma nesta insercao.
+Validacao apos insercao: OK
+
+--- AVL ---
+1 Inserir | 2 Buscar | 3 Exibir | 4 Verificar | 5 Limpar | 0 Voltar
+Opcao: Nova chave: Insercao realizada.
+Rotacoes: nenhuma nesta insercao.
+Validacao apos insercao: OK
+
+--- AVL ---
+1 Inserir | 2 Buscar | 3 Exibir | 4 Verificar | 5 Limpar | 0 Voltar
+Opcao: Nova chave: Insercao realizada.
+Rotacao RL: direita no filho e esquerda no no (1 vez(es)).
+Validacao apos insercao: OK
+
+--- AVL ---
+1 Inserir | 2 Buscar | 3 Exibir | 4 Verificar | 5 Limpar | 0 Voltar
+Opcao: Raiz: 20
+No        Esquerdo  Direito   Altura  FB
+20        10        30        1       0
+10        NULL      NULL      0       0
+30        NULL      NULL      0       0
+Em ordem: 10, 20, 30
+Nos: 3 | Altura: 1 | BST + balanceamento + alturas: VALIDOS
+
+--- AVL ---
+1 Inserir | 2 Buscar | 3 Exibir | 4 Verificar | 5 Limpar | 0 Voltar
+Opcao: 
+1 Arvore binaria | 2 BST | 3 AVL | 4 Max-heap | 5 Comparacao | 0 Sair
+Opcao: 
+--- MAX-HEAP ---
+1 Inserir | 2 Consultar maximo | 3 Extrair maximo | 4 Exibir | 5 Verificar | 6 Limpar | 0 Voltar
+Opcao: Nova chave: Inserido. Propriedade heap: VALIDA
+
+--- MAX-HEAP ---
+1 Inserir | 2 Consultar maximo | 3 Extrair maximo | 4 Exibir | 5 Verificar | 6 Limpar | 0 Voltar
+Opcao: Nova chave: Inserido. Propriedade heap: VALIDA
+
+--- MAX-HEAP ---
+1 Inserir | 2 Consultar maximo | 3 Extrair maximo | 4 Exibir | 5 Verificar | 6 Limpar | 0 Voltar
+Opcao: Nova chave: Inserido. Propriedade heap: VALIDA
+
+--- MAX-HEAP ---
+1 Inserir | 2 Consultar maximo | 3 Extrair maximo | 4 Exibir | 5 Verificar | 6 Limpar | 0 Voltar
+Opcao: Nova chave: Inserido. Propriedade heap: VALIDA
+
+--- MAX-HEAP ---
+1 Inserir | 2 Consultar maximo | 3 Extrair maximo | 4 Exibir | 5 Verificar | 6 Limpar | 0 Voltar
+Opcao: Nova chave: Inserido. Propriedade heap: VALIDA
+
+--- MAX-HEAP ---
+1 Inserir | 2 Consultar maximo | 3 Extrair maximo | 4 Exibir | 5 Verificar | 6 Limpar | 0 Voltar
+Opcao: Nova chave: Inserido. Propriedade heap: VALIDA
+
+--- MAX-HEAP ---
+1 Inserir | 2 Consultar maximo | 3 Extrair maximo | 4 Exibir | 5 Verificar | 6 Limpar | 0 Voltar
+Opcao: Nova chave: Troca: indice 2 (40) <-> indice 6 (60)
+Troca: indice 0 (50) <-> indice 2 (60)
+Inserido. Propriedade heap: VALIDA
+
+--- MAX-HEAP ---
+1 Inserir | 2 Consultar maximo | 3 Extrair maximo | 4 Exibir | 5 Verificar | 6 Limpar | 0 Voltar
+Opcao: Tamanho: 7 / 128
+Indices: 0, 1, 2, 3, 4, 5, 6
+Valores: 60, 30, 50, 10, 20, 35, 40
+
+--- MAX-HEAP ---
+1 Inserir | 2 Consultar maximo | 3 Extrair maximo | 4 Exibir | 5 Verificar | 6 Limpar | 0 Voltar
+Opcao: Maximo: 60
+
+--- MAX-HEAP ---
+1 Inserir | 2 Consultar maximo | 3 Extrair maximo | 4 Exibir | 5 Verificar | 6 Limpar | 0 Voltar
+Opcao: Troca: indice 0 (40) <-> indice 2 (50)
+Maximo extraido: 60. Propriedade heap: VALIDA
+
+--- MAX-HEAP ---
+1 Inserir | 2 Consultar maximo | 3 Extrair maximo | 4 Exibir | 5 Verificar | 6 Limpar | 0 Voltar
+Opcao: Tamanho: 6 / 128
+Indices: 0, 1, 2, 3, 4, 5
+Valores: 50, 30, 40, 10, 20, 35
+
+--- MAX-HEAP ---
+1 Inserir | 2 Consultar maximo | 3 Extrair maximo | 4 Exibir | 5 Verificar | 6 Limpar | 0 Voltar
+Opcao: 
+1 Arvore binaria | 2 BST | 3 AVL | 4 Max-heap | 5 Comparacao | 0 Sair
+Opcao: 
+--- COMPARACAO COM INSERCOES 1..15 ---
+Medida              BST    AVL
+Quantidade nos       15     15
+Altura               14     3
+Busca 1              1      4
+Busca 8              8      1
+Busca 15             15     4
+Busca 99             15     4
+BST valida: SIM | AVL valida: SIM
+A BST ordenada pela insercao 1..15 torna-se uma cadeia.
+A AVL rebalanceia e diminui a altura; buscas pontuais podem favorecer a BST.
+
+1 Arvore binaria | 2 BST | 3 AVL | 4 Max-heap | 5 Comparacao | 0 Sair
+Opcao: Recursos liberados. Encerrando o laboratorio.

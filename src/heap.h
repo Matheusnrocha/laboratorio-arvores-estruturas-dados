@@ -1,3 +1,4 @@
+/* Interfaces elaboradas com apoio de IA: ver IA-04 em USO_IA.md. */
 #ifndef HEAP_H
 #define HEAP_H
 #include <stdio.h>

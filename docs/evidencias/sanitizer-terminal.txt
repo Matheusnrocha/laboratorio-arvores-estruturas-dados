@@ -1,0 +1,6 @@
+PASS Arvore binaria: exemplo, 3 percursos, rejeicoes, casos limites, limpeza
+PASS BST: busca visitados, tres remocoes, raiz, limites, ordenacao, limpeza
+PASS AVL: LL/RR/LR/RL, FB, alturas, busca, duplicatas, comparacao
+PASS Heap: sift-up/down, vetor, extracoes decrescentes, capacidade, vazios
+PASS Comparacao: alturas 14/3 e visitas 1,8,15,15 / 4,1,4,4
+TOTAL: 5 conjuntos de testes APROVADOS.

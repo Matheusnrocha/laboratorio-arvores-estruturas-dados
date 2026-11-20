@@ -1,3 +1,4 @@
+/* Modulo elaborado com apoio de IA: ver IA-01 em USO_IA.md. */
 #include "arvore_binaria.h"
 #include <stdlib.h>
 

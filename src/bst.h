@@ -1,3 +1,4 @@
+/* Interfaces elaboradas com apoio de IA: ver IA-02 em USO_IA.md. */
 #ifndef BST_H
 #define BST_H
 #include <stdio.h>

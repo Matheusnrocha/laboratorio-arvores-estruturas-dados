@@ -1,3 +1,4 @@
+/* Modulo elaborado com apoio de IA: ver IA-04 em USO_IA.md. */
 #include "heap.h"
 
 void heap_inicializar(MaxHeap *heap) { heap->tamanho = 0; }

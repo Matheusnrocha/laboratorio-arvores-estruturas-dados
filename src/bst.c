@@ -1,3 +1,4 @@
+/* Modulo elaborado com apoio de IA: ver IA-02 em USO_IA.md. */
 #include "bst.h"
 #include <stdlib.h>
 #include <limits.h>

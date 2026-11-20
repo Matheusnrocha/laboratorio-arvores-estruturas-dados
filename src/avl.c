@@ -1,3 +1,4 @@
+/* Modulo elaborado com apoio de IA: ver IA-03 em USO_IA.md. */
 #include "avl.h"
 #include <stdlib.h>
 #include <limits.h>

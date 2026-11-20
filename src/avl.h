@@ -1,3 +1,4 @@
+/* Interfaces elaboradas com apoio de IA: ver IA-03 em USO_IA.md. */
 #ifndef AVL_H
 #define AVL_H
 #include <stdio.h>

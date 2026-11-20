@@ -1,3 +1,4 @@
+/* Interfaces elaboradas com apoio de IA: ver IA-01 em USO_IA.md. */
 #ifndef ARVORE_BINARIA_H
 #define ARVORE_BINARIA_H
 #include <stdio.h>
