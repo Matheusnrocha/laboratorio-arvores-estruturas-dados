@@ -119,10 +119,15 @@ static void menu_bst(NoBST **raiz) {
                 puts(r == BST_OK ? "Insercao realizada." : r == BST_DUPLICADA ? "Rejeitada: chave duplicada." : "Erro: memoria insuficiente.");
                 break;
             }
-            case 2:
+            case 2: {
                 if (!ler_inteiro("Buscar chave: ", &chave)) return;
-                printf("%s. Nos visitados: %d\n", bst_buscar(*raiz, chave, &visitas) ? "Encontrada" : "Nao encontrada", visitas);
+                /* Busca concluida antes de ler o contador. Correcao: ver IA-08. */
+                visitas = 0;
+                const NoBST *resultado = bst_buscar(*raiz, chave, &visitas);
+                printf("%s. Nos visitados: %d\n",
+                       resultado != NULL ? "Encontrada" : "Nao encontrada", visitas);
                 break;
+            }
             case 3: {
                 if (!ler_inteiro("Remover chave: ", &chave)) return;
                 BstResultado r = bst_remover(raiz, chave);
@@ -171,10 +176,15 @@ static void menu_avl(NoAVL **raiz) {
                 } else puts(r == AVL_DUPLICADA ? "Rejeitada: chave duplicada." : "Erro: memoria insuficiente.");
                 break;
             }
-            case 2:
+            case 2: {
                 if (!ler_inteiro("Buscar chave: ", &chave)) return;
-                printf("%s. Nos visitados: %d\n", avl_buscar(*raiz, chave, &visitas) ? "Encontrada" : "Nao encontrada", visitas);
+                /* Busca concluida antes de ler o contador. Correcao: ver IA-08. */
+                visitas = 0;
+                const NoAVL *resultado = avl_buscar(*raiz, chave, &visitas);
+                printf("%s. Nos visitados: %d\n",
+                       resultado != NULL ? "Encontrada" : "Nao encontrada", visitas);
                 break;
+            }
             case 3: mostrar_avl(*raiz); break;
             case 4: printf("BST + balanceamento + alturas: %s\n", avl_verificar(*raiz) ? "VALIDOS" : "INVALIDOS"); break;
             case 5: avl_limpar(raiz); puts("AVL limpa. Raiz = NULL."); break;
