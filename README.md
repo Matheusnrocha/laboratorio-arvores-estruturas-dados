@@ -1,120 +1,166 @@
-# Laboratorio Interativo de Arvores
 
-**Disciplina:** Laboratorio de Estruturas de Dados — Regime especial  
-**Autor:** [PREENCHER NOME E RA ANTES DE ENTREGAR]  
-**Linguagem:** C11, terminal  
-**Enunciado:** `Trabalho_Pratico_Estruturas_de_Dados_Regime_Especial.pdf` (material fornecido pelo professor)  
-**Video de demonstracao (5 a 8 minutos):** [INSERIR LINK APOS A GRAVACAO]
+# Laboratório Interativo de Árvores
 
-## Objetivo
+**Disciplina:** Laboratório de Estruturas de Dados — Regime Especial  
+**Aluno:** MATHEUS NOVAIS ROCHA  
+**RA:** 202110039  
+**Linguagem:** C (padrão C11)  
+**Repositório:** https://github.com/Matheusnrocha/laboratorio-arvores-estruturas-dados  
+**Vídeo de apresentação:** https://youtu.be/ybJ8TbhL_mc — demonstração de 5 a 8 minutos
 
-Demonstrar quatro estruturas independentes, implementadas com `struct`, ponteiros, recursao e gerenciamento de memoria: arvore binaria (sem ordenacao), BST, AVL e max-heap representado por vetor. O programa apresenta um menu principal, submenus e um experimento comparativo entre BST e AVL.
+## 1. Sobre o projeto
 
-## Funcionalidades
+Este projeto apresenta um laboratório interativo de estruturas de dados desenvolvido em linguagem C e executado pelo terminal. A proposta é permitir a construção, a manipulação e a visualização de quatro estruturas independentes: **árvore binária**, **árvore binária de busca (BST)**, **árvore AVL** e **max-heap**.
 
-| Modulo | Operacoes |
+O programa oferece um menu principal, submenus para cada estrutura e um experimento de comparação entre BST e AVL. Na implementação das árvores são utilizados `structs`, ponteiros, funções recursivas e alocação dinâmica de memória. O heap é armazenado em um vetor.
+
+## 2. Funcionalidades
+
+| Módulo | Operações implementadas |
 |---|---|
-| Arvore binaria | Criacao por pai/lado, exemplo obrigatorio, tres percursos, altura, nos, folhas, ligacoes, limpeza |
-| BST | Insercao, busca com visitas, remocao de folha/um filho/dois filhos, tres percursos, verificacao de limites ancestrais, limpeza |
-| AVL | Insercao, busca com visitas, LL/RR/LR/RL, rastreamento de rotacoes, alturas, fatores, verificacao BST e balanceamento, limpeza |
-| Max-heap | Insercao com sift-up, consulta sem remocao, extracao com sift-down, registro de trocas, vetor indexado, validacao, limpeza |
-| Comparacao | Insercoes de 1 a 15, buscas 1/8/15/99, alturas e visitas em BST e AVL, estruturas temporarias independentes |
+| Árvore binária | Inserção por pai e lado, carregamento do exemplo do enunciado, percursos em pré-ordem, em ordem e pós-ordem, contagem de nós e folhas, altura, exibição das ligações e limpeza. |
+| BST | Inserção ordenada, busca com contagem de nós visitados, remoção de nós com zero, um ou dois filhos, percursos, altura, exibição das ligações, validação da propriedade de ordenação e limpeza. |
+| AVL | Inserção balanceada, busca com contagem de visitas, rotações LL, RR, LR e RL, percurso em ordem, altura, fatores de balanceamento, validação e limpeza. |
+| Max-heap | Inserção com *sift-up*, consulta ao máximo, extração com *sift-down*, registro de trocas, exibição do vetor e índices, validação e limpeza. |
+| Comparação BST × AVL | Inserção dos números de 1 a 15 nas duas estruturas, medição de altura e contagem de nós visitados nas buscas por 1, 8, 15 e 99. |
 
-Chaves inteiras negativas, zero e positivas sao aceitas, sem duplicatas. A altura usa **arestas**: arvore vazia = -1; folha = 0. A BST remove nos de dois filhos pelo **sucessor em ordem**. O max-heap possui **128 posicoes** e indices iniciados em zero. A AVL nao possui remocao, como permitido pelo enunciado.
+### Convenções adotadas
 
-## Arquivos
+- As chaves são números inteiros e não são permitidas duplicatas.
+- A altura de uma árvore é medida pelo **número de arestas** do maior caminho da raiz até uma folha: árvore vazia = `-1`, folha = `0`.
+- Na BST, a remoção de um nó com dois filhos utiliza o **sucessor em ordem** (menor valor da subárvore direita).
+- Na AVL, o fator de balanceamento é `altura(esquerda) - altura(direita)` e deve permanecer entre `-1` e `1` em todos os nós.
+- O max-heap é representado por vetor com **capacidade fixa de 128 posições**, indexadas a partir de zero.
+
+## 3. Organização dos arquivos
 
 ```text
-src/
-  main.c                 menus, leitura validada e comparacao
-  arvore_binaria.c/.h    arvore binaria sem regra de ordenacao
-  bst.c/.h               arvore binaria de busca
-  avl.c/.h               arvore AVL
-  heap.c/.h              max-heap
-scripts/
-  verificar.sh           compilacao e verificacoes (Linux/macOS/Git Bash)
-testes/
-  teste_estruturas.c     assert dos casos obrigatorios e limites
-  entrada_demo.txt       sequencia reproduzivel para o menu
-docs/
-  testes.md              relatorio de testes
-  comparacao.md          experimento e respostas tecnicas
-  roteiro_video.md       roteiro para demonstracao
-  publicacao_git.md      instrucoes para publicacao remota e commits
-  evidencias/
-    demo-terminal.txt    transcricao real do programa
-    verificacao-terminal.txt resultados dos testes
-USO_IA.md                contribuicoes de IA e verificacoes
-README.md
-.gitignore
+laboratorio-arvores/
+├── src/
+│   ├── main.c                 # Menus, entrada do usuário e comparação BST × AVL
+│   ├── arvore_binaria.c/.h    # Árvore binária sem ordenação
+│   ├── bst.c/.h               # Árvore binária de busca
+│   ├── avl.c/.h               # Árvore AVL
+│   └── heap.c/.h              # Max-heap
+├── testes/
+│   ├── teste_estruturas.c     # Testes automatizados
+│   └── entrada_demo.txt       # Entradas reproduzíveis para o menu
+├── docs/
+│   ├── testes.md              # Relatório de testes
+│   ├── comparacao.md          # Experimento e análise BST × AVL
+│   ├── roteiro_video.md       # Material de apoio à apresentação
+│   ├── publicacao_git.md      # Orientações sobre publicação
+│   └── evidencias/            # Saídas registradas do terminal
+├── scripts/
+│   └── verificar.sh           # Verificações em shell compatível
+├── README.md
+├── USO_IA.md
+└── .gitignore
 ```
 
-## Compilacao e execucao
+## 4. Requisitos e compilação
 
-### Linux / macOS / Git Bash com GCC
+É necessário ter o **GCC** instalado. O projeto utiliza somente a biblioteca padrão da linguagem C, sem bibliotecas prontas de árvores ou heap.
+
+### Windows — PowerShell no VS Code
+
+O projeto foi compilado e executado no **Windows com GCC 16.2.0 (MSYS2 UCRT64)**.
+
+Abra o terminal PowerShell na pasta raiz do repositório. Se o GCC estiver instalado em `C:\msys64\ucrt64\bin`, mas não for reconhecido no terminal atual, execute:
+
+```powershell
+$env:Path = "C:\msys64\ucrt64\bin;$env:Path"
+gcc --version
+```
+
+Essa configuração do `PATH` vale apenas para o terminal atual.
+
+Para compilar e executar:
+
+```powershell
+gcc -std=c11 -Wall -Wextra -pedantic (Get-ChildItem .\src\*.c).FullName -o laboratorio.exe
+.\laboratorio.exe
+```
+
+### Linux, macOS ou Git Bash com GCC
 
 ```bash
 gcc -std=c11 -Wall -Wextra -pedantic src/*.c -o laboratorio
 ./laboratorio
 ```
 
-### Windows com GCC (PowerShell)
+## 5. Como utilizar o programa
 
-```powershell
-gcc -std=c11 -Wall -Wextra -pedantic src/*.c -o laboratorio.exe
-.\laboratorio.exe
+Ao iniciar, o terminal apresenta o menu principal:
+
+```text
+=== LABORATORIO INTERATIVO DE ARVORES ===
+
+1 Arvore binaria | 2 BST | 3 AVL | 4 Max-heap | 5 Comparacao | 0 Sair
+Opcao:
 ```
 
-> Se o GCC nao estiver instalado, configure um compilador MinGW-w64 ou use um terminal Linux com GCC. O projeto nao depende de bibliotecas externas alem da biblioteca padrao de C.
+Escolha um módulo e siga as opções do submenu para inserir, consultar, exibir, validar ou limpar a estrutura. A opção `5` do menu principal executa automaticamente o experimento de comparação entre BST e AVL.
 
-## Testes reproduziveis
+## 6. Testes e resultados
 
-Com GCC e shell compatível:
+Os cenários previstos no enunciado estão descritos em [docs/testes.md](docs/testes.md), com entradas, resultados esperados e obtidos e registros de execução. A análise do experimento está em [docs/comparacao.md](docs/comparacao.md).
+
+Na validação manual realizada no Windows, foram conferidos, entre outros pontos:
+
+- Os percursos do exemplo da árvore binária, com **6 nós, 3 folhas e altura 2**.
+- A BST com as chaves `50, 30, 70, 20, 40, 60, 80`, incluindo busca e remoção nos três casos; também foram testadas árvore vazia e chave duplicada.
+- As quatro sequências de rotação da AVL (LL, RR, LR e RL), com validação de altura e balanceamento.
+- A inserção no max-heap de `50, 30, 40, 10, 20, 35, 60`, a extração sucessiva dos máximos e o tratamento de heap vazio.
+- A comparação BST × AVL com os números de 1 a 15, confirmando **altura 14 na BST** e **altura 3 na AVL**.
+- A correção da apresentação da quantidade de nós visitados nas buscas por meio de recompilação e repetição dos testes.
+
+### Executar a entrada demonstrativa no Windows
+
+Com o programa já compilado:
+
+```powershell
+Get-Content .\testes\entrada_demo.txt | .\laboratorio.exe
+```
+
+### Compilar e executar os testes automatizados no Windows
+
+```powershell
+gcc -std=c11 -Wall -Wextra -pedantic -I src testes/teste_estruturas.c src/arvore_binaria.c src/bst.c src/avl.c src/heap.c -o teste_estruturas.exe
+.\teste_estruturas.exe
+```
+
+Em ambiente com shell compatível, também é possível executar:
 
 ```bash
 sh scripts/verificar.sh
 ```
 
-Compilacao manual da suite em sistemas sem shell Unix:
+**Observação:** os resultados dos testes automatizados e os testes manuais no Windows são apresentados separadamente na documentação; nem todos os casos de limite foram repetidos manualmente.
 
-```bash
-gcc -std=c11 -Wall -Wextra -pedantic -I src testes/teste_estruturas.c src/arvore_binaria.c src/bst.c src/avl.c src/heap.c -o teste_estruturas
-./teste_estruturas
-```
+## 7. Tratamento de erros e limitações
 
-No PowerShell, substitua a ultima linha por `.\teste_estruturas.exe` e compile com `-o teste_estruturas.exe`.
+O programa trata entradas inválidas, duplicatas, busca ou remoção de chaves inexistentes, posições ocupadas na árvore binária, estrutura vazia e capacidade do heap. As árvores utilizam memória dinâmica, com liberação de nós nas operações de limpeza e no encerramento.
 
-Para reproduzir a demonstracao completa do terminal (entrada predefinida, executada pelos menus reais):
+Não foram desenvolvidos interface gráfica, persistência em arquivos, banco de dados ou remoção na AVL, pois esses recursos não são exigidos pelo enunciado. O max-heap possui capacidade máxima de 128 elementos simultâneos.
 
-```bash
-./laboratorio < testes/entrada_demo.txt
-```
+## 8. Uso de inteligência artificial
 
-No PowerShell: `Get-Content testes/entrada_demo.txt | .\laboratorio.exe`.
+Foi utilizada inteligência artificial como ferramenta de apoio ao planejamento, à **geração de versões iniciais de código**, à revisão de algoritmos, à depuração, aos testes automatizados e à documentação.
 
-As entradas/saidas esperadas e obtidas constam em [docs/testes.md](docs/testes.md). A comparacao e sua interpretacao constam em [docs/comparacao.md](docs/comparacao.md).
+A compreensão dos conceitos, a execução de testes manuais no Windows, a análise dos resultados e a identificação de inconsistências durante essas execuções fizeram parte das atividades realizadas pelo aluno. Uma falha observada na contagem de nós visitados durante as buscas foi analisada com apoio da IA; a correção foi incorporada e validada em nova execução pelo aluno.
 
-## Casos de erro e limitacoes
+O registro das contribuições, com datas, arquivos afetados, verificações e commits relacionados, está disponível em [USO_IA.md](USO_IA.md).
 
-- Entradas nao numericas e opcoes invalidas sao rejeitadas sem encerrar o processo.
-- Chaves duplicadas sao rejeitadas nos quatro modulos.
-- Posicao ocupada, pai inexistente e lado invalido sao rejeitados na arvore binaria.
-- Buscas e remocoes de chave inexistente sao informadas.
-- Insercao com capacidade cheia e consulta/extracao em heap vazio sao protegidas.
-- `malloc` e verificado. Remocoes e limpeza liberam os nos; ao encerrar, as tres arvores sao liberadas.
-- Nao ha GUI, persistencia em arquivo, banco de dados ou remocao AVL (dispensados pelo enunciado).
-- O max-heap usa capacidade fixa de 128 elementos, o que limita o numero de chaves simultaneas.
+## 9. Referências
 
-## Referencias e IA
+- Enunciado fornecido pelo professor: *Trabalho Prático de Estruturas de Dados — Laboratório de Estruturas de Dados, Regime Especial*.
+- Documentação e materiais de apoio consultados durante o desenvolvimento estão identificados, quando aplicável, nos registros de uso de IA e nos arquivos de documentação do projeto.
 
-- Enunciado do professor: *Trabalho pratico de estruturas de dados — Laboratorio de Estruturas de Dados, Regime especial*, pp. 1–7.
-- [USO_IA.md](USO_IA.md): registro da geracao assistida, trechos afetados e resultados dos testes. **O projeto foi implementado com apoio substancial de IA**; a declaracao nao deve ser reduzida a apenas um algoritmo.
+## 10. Vídeo de apresentação e entrega
 
-## Conferencia de entrega
+O vídeo demonstra os percursos da árvore binária, a remoção de um nó com dois filhos na BST, uma rotação dupla na AVL, a inserção e a extração no max-heap, os resultados da comparação BST × AVL e uma contribuição da IA ao desenvolvimento.
 
-- [ ] Substituir os campos de autoria/RA e o link do video.
-- [ ] Revisar o codigo e reproduzir os testes no proprio computador.
-- [ ] Ler [docs/publicacao_git.md](docs/publicacao_git.md), conferir identidade Git, remoto e acesso do professor.
-- [ ] Publicar as etapas de desenvolvimento e conferir o requisito de commits/pushes distribuidos.
-- [ ] Gravar video de 5 a 8 minutos conforme `docs/roteiro_video.md`.
-- [ ] Revisar/atualizar `USO_IA.md` com eventuais alteracoes manuais feitas pelo aluno.
+**Link para assistir:** https://youtu.be/ybJ8TbhL_mc
+
+Para a entrega, o vídeo deve estar acessível pelo link, ter duração entre **5 e 8 minutos**, e o repositório deve permanecer acessível ao professor.
