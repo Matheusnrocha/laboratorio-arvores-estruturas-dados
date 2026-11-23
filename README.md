@@ -6,7 +6,7 @@
 **RA:** 202110039  
 **Linguagem:** C (padrão C11)  
 **Repositório:** https://github.com/Matheusnrocha/laboratorio-arvores-estruturas-dados  
-**Vídeo de apresentação:** https://youtu.be/ybJ8TbhL_mc — demonstração de 5 a 8 minutos
+**Vídeo de apresentação:** https://youtu.be/ybJ8TbhL_mc
 
 ## 1. Sobre o projeto
 
